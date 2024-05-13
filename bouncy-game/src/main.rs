@@ -30,7 +30,7 @@ struct Game{
 }
 
 impl Game{
-    fm new() -> Game{
+    fn new() -> Game{
         Game{
             frame : Frame{
                 width : 63, 
@@ -67,7 +67,7 @@ impl Ball{
             self.vert_dir = VertDir::Down;
         }
         else if frame.height <= self.y{
-            self.vert_dir = vert_dir::Up;
+            self.vert_dir = VertDir::Up;
 
         }
         else{
@@ -88,7 +88,7 @@ impl Ball{
 }
 
 impl Display for Game{
-    fn fmt(&self, fmt: &mut Formatter)->Result<(), Error{
+    fn fmt(&self, fmt: &mut Formatter)->Result<(), Error>{
         write!(fmt, "x");
         for _ in 0..64{write!(fmt, "-");}
         for y in 0..32{
@@ -97,7 +97,7 @@ impl Display for Game{
                     write!(fmt, "0");
 
                 }
-                if x == 0 {write!(fmt, "|"):}
+                if x == 0 {write!(fmt, "|");}
                 else if x != 0 && y != 31{write!(fmt, " ");}
                 else {write!(fmt, "_");}
             }
@@ -106,10 +106,7 @@ impl Display for Game{
         }
         write!(fmt, "\n")
     }
-
-    
 }
-
 fn main() {
     let mut new_game = Game::new();
     let sleep_time = std::time::Duration::from_millis(33);
