@@ -5,12 +5,10 @@ enum VertDir{
     Up,
     Down
 }
-
 enum HorizDir{
     Left,
     Right
 }
-
 struct Ball{
     x : i32,
     y : i32,
