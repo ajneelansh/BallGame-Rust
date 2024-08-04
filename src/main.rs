@@ -1,6 +1,5 @@
 use std::fmt;
 use std::fmt::{Display, Formatter, Error};
-
 enum VertDir{
     Up,
     Down
@@ -74,6 +73,7 @@ impl Ball{
 
         }
     }
+    
 
     fn mv(&mut self){
         match self.horiz_dir{
