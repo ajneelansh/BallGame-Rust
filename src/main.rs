@@ -1,6 +1,7 @@
 use std::fmt;
 use std::fmt::{Display, Formatter, Error};
 enum VertDir{
+    
     Up,
     Down
 }
@@ -88,7 +89,8 @@ impl Ball{
 }
 
 impl Display for Game{
-    fn fmt(&self, fmt: &mut Formatter)->Result<(), Error>{
+    
+    fn fmt(&self, fmt: &mut Formatter)->Result<(),  Error>{
         write!(fmt, "x");
         for _ in 0..64{write!(fmt, "-");}
         for y in 0..32{
